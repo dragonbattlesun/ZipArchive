@@ -479,6 +479,8 @@
                 unzCloseCurrentFile( _unzFile );
                 break;
             }
+            
+            
             char* filename = (char*) malloc( fileInfo.size_filename +1 );
             unzGetCurrentFileInfo(_unzFile, &fileInfo, filename, fileInfo.size_filename + 1, NULL, 0, NULL, 0);
             filename[fileInfo.size_filename] = '\0';
